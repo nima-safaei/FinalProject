@@ -1,0 +1,345 @@
+HTML
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="style/style.css">
+  <link rel="stylesheet" href="node_modules/bootstrap-icons/font/bootstrap-icons.css">
+
+</head>
+
+<body>
+
+  <main class="container-fluid">
+    <section class="row flex-row-reverse">
+
+      <article class="col-md-9">
+
+        <figure>
+          <img id="mainpic" src="image/avatar3.png" alt="">
+        </figure>
+
+        <p id="title">Subject: Remember Me</p>
+
+        <div>
+          <h4>
+            <i class="bi bi-clock"></i>
+            <span id="sender">From Borge Refsnes</span>,
+            <span id="date">Sep 27, 2026</span>
+          </h4>
+        </div>
+
+        <div id="action">
+          <a type="a" class="btn btn-secondary btn-lg">
+            Reply<span><i class="bi bi-reply-fill"></i></span>
+          </a>
+
+          <a type="a" class="btn btn-secondary btn-lg">
+            Forward <span><i class="bi bi-forward-fill"></i></span>
+          </a>
+        </div>
+
+        <hr>
+
+        <p id="message1">
+          Hello, I just wanted to let you know that I'll be home at lorem ipsum dolor sit amet,
+          consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
+          commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+          deserunt mollit anim id est laborum consectetur adipiscing elit.
+        </p>
+
+        <p id="message2">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolorum in, quam nesciunt expedita
+          explicabo vitae placeat, magnam fuga delectus a assumenda officiis rerum aperiam.
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus, ipsum magnam nisi eveniet
+          aperiam amet debitis natus voluptatum.
+        </p>
+
+        <p id="ending">
+          Best Regards,
+          <br>
+          Borge Refsnes
+        </p>
+
+      </article>
+
+      <aside class="col-md-3">
+
+        <h3>w3school <span>.com</span></h3>
+
+        <div id="btn">
+          <button type="button" class="btn btn-primary w-100 py-4"
+            data-bs-toggle="modal" data-bs-target="#exampleModal">
+            new massage<i class="bi bi-pen-fill"></i>
+          </button>
+        </div>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1"
+          aria-labelledby="exampleModalLabel" aria-hidden="true">
+
+          <div class="modal-dialog">
+            <div class="modal-content">
+
+              <div class="modal-header bg-danger">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">send email</h1>
+
+                <button type="button" class="btn-close"
+                  data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+
+              <form class="p-5">
+
+                <label for="#">to</label><br>
+                <input class="w-100" type="text">
+
+                <label class="mt-3" for="#">form</label><br>
+                <input class="w-100" type="text">
+
+                <div class="mt-3">
+                  <input class="w-100" type="text" placeholder="What's on your mind?">
+                </div>
+
+              </form>
+
+              <section id="scrol"></section>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+
+          <div class="accordion-item">
+
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed bg-danger text-white" type="button"
+                       data-bs-toggle="collapse"
+                       data-bs-target="#flush-collapseOne"
+                       aria-expanded="false"
+                       aria-controls="flush-collapseOne">
+
+    <i class="bi bi-inbox-fill"></i> inbox (1)
+
+</button>
+            </h2>
+            <div id="flush-collapseOne" class="accordion-collapse collapse"
+              data-bs-parent="#accordionFlushExample">
+
+              <div class="accordion-body">
+
+                <div id="pepole" class="accordion-body">
+
+                  <div class="row" onclick="showPeople(0)">
+
+                    <div id="first" class="col-md-3">
+                      <img id="firstpic" alt="">
+                    </div>
+
+                    <div class="col-md-9">
+                      <h5 id="firsttitle"></h5>
+                    </div>
+
+                    <p id="firstinfo"></p>
+                    <hr>
+
+                  </div>
+
+                  <div class="row" onclick="showPeople(1)">
+
+                    <div id="second" class="col-md-3">
+                      <img id="secondpic" alt="">
+                    </div>
+
+                    <div class="col-md-9">
+                      <h5 id="secondtitle"></h5>
+                    </div>
+
+                    <p id="secondinfo"></p>
+                    <hr>
+
+                  </div>
+
+                  <div class="row" onclick="showPeople(2)">
+
+                    <div class="col-md-3">
+                      <img id="thirdpic" alt="">
+                    </div>
+
+                    <div class="col-md-9">
+                      <h5 id="thirdtitle"></h5>
+                    </div>
+
+                    <p id="thirdinfo"></p>
+                    <hr>
+
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion-item">
+
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseTwo"
+                aria-expanded="false"
+                aria-controls="flush-collapseTwo">
+
+                <i class="bi bi-send"></i> Sent
+
+              </button>
+            </h2>
+
+          </div>
+
+          <div class="accordion-item">
+
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseThree"
+                aria-expanded="false"
+                aria-controls="flush-collapseThree">
+
+                <i class="bi bi-hourglass-bottom"></i> Drafts
+
+              </button>
+            </h2>
+
+          </div>
+
+          <div class="accordion-item">
+
+            <h2 class="accordion-header">
+              <button class="accordion-button collapsed" type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#flush-collapseFour"
+                aria-expanded="false"
+                aria-controls="flush-collapseFour">
+
+                <i class="bi bi-trash3-fill"></i> Trash
+
+              </button>
+            </h2>
+
+          </div>
+
+        </div>
+
+      </aside>
+
+    </section>
+  </main>
+
+
+  <script>
+
+    let people = [
+
+      {
+        name: "John Doe",
+        role: "Web Designer",
+        image: "image/avatar3.png",
+        info: "JohnDoe is a starter webdesign his rule is simple: JohnDoe works as a web designer.",
+
+        subject: "Subject: Remember Me",
+        date: "Sep 27, 2026",
+
+        message1: "Hello, I just wanted to let you know that I'll be home at lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+
+        message2: "Lorem ipsum dolor, sit amet consectetur adipisicing elit. John works as a web designer and enjoys creating websites.",
+
+        ending: "Best Regards, John Doe"
+      },
+
+      {
+        name: "Nima Doe",
+        role: "Programmer",
+        image: "image/avatar2.png",
+        info: "Nima is cousin of john he is more than pro in programming and his language is Python.",
+
+        subject: "Subject: Programming Project",
+        date: "Sep 28, 2026",
+
+        message1: "Hello, I'm Nima. I wanted to tell you about my new programming project. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+        message2: "I have been working on games and apps. My favorite programming language is Python.",
+
+        ending: "Best Regards, Nima Doe"
+      },
+
+      {
+        name: "Alex Doe",
+        role: "Developer",
+        image: "image/avatar5.png",
+        info: "Alex is David Aunt (maternal) and John Aunt (paternal). She is a developer.",
+
+        subject: "Subject: Web Update",
+        date: "Sep 29, 2026",
+
+        message1: "Hello! I have some news about the website. Lorem ipsum dolor sit amet consectetur adipisicing elit.",
+
+        message2: "I have been working on a new web design project and I hope you like it.",
+
+        ending: "Best Regards, Alex Doe"
+      }
+
+    ];
+
+
+    function getPeople() {
+
+      document.getElementById("firsttitle").innerText = people[0].name + " - " + people[0].role;
+      document.getElementById("firstpic").src = people[0].image;
+      document.getElementById("firstinfo").innerText = people[0].info;
+
+      document.getElementById("secondtitle").innerText = people[1].name + " - " + people[1].role;
+      document.getElementById("secondpic").src = people[1].image;
+      document.getElementById("secondinfo").innerText = people[1].info;
+
+      document.getElementById("thirdtitle").innerText = people[2].name + " - " + people[2].role;
+      document.getElementById("thirdpic").src = people[2].image;
+      document.getElementById("thirdinfo").innerText = people[2].info;
+
+    }
+
+
+    function showPeople(i) {
+
+      document.getElementById("mainpic").src = people[i].image;
+
+      document.getElementById("title").innerText = people[i].subject;
+
+      document.getElementById("sender").innerText = "From " + people[i].name;
+
+      document.getElementById("date").innerText = people[i].date;
+
+      document.getElementById("message1").innerText = people[i].message1;
+
+      document.getElementById("message2").innerText = people[i].message2;
+
+      document.getElementById("ending").innerText = people[i].ending;
+
+    }
+
+
+    getPeople();
+
+    showPeople(0);
+
+  </script>
+
+
+  <script src="node_modules/bootstrap/dist/js/bootstrap.js"></script>
+
+</body>
+</html>
